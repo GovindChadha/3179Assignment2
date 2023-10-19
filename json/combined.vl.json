@@ -118,7 +118,7 @@
           },
           "encoding": {
             "x": {"field": "Year", "type": "ordinal"},
-            "y": {"field": "GDP", "type": "quantitative"}
+            "y": {"field": "Happiness Score", "type": "quantitative"}
           }
         }
       ]
