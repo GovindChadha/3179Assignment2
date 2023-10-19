@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World</title>
+    <style>
+        /* Basic styles for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darkorchid;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: lavender;
+            padding: 20px;
+        }
+        .header, .section {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        .visualization {
+            /* Placeholder styles */
+            width: 100%;
+            height: 200px;
+            background-color: #f5f5f5;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Life Expectancy Across the World</h1>
+            <h2>2000-2015</h2>
+            <p>Description about life expectancy...</p>
+        </div>
+
+        <div class="section">
+            <h2>Overall Life Expectancy Across the World</h2>
+
+            <div id="vis1" class="column2" style ="object-fit: scale-down; height: auto; padding-right: 30px; "> </div>
+            </div>
+            <p>Description about overall life expectancy...</p>
+        </div>
+
+        <div class="section">
+            <h2>Average Life Expectancy Per Region</h2>
+            <div class="visualization">
+                <!-- Your regional life expectancy chart goes here -->
+            </div>
+            <p>Description about average life expectancy per region...</p>
+        </div>
+
+        <div class="section">
+            <h2>Average Life Expectancy per Country Type (Developed or Developing)</h2>
+            <div class="visualization">
+                <!-- Your life expectancy per country type visualization goes here -->
+            </div>
+            <p>Description about life expectancy based on country type...</p>
+        </div>
+
+        <div class="section">
+            <h2>Life Expectancy vs GDP Year by Year</h2>
+            <div class="visualization">
+                <!-- Your life expectancy vs GDP visualization goes here -->
+            </div>
+            <p>Description about life expectancy vs GDP...</p>
+        </div>
+
+        <div class="footer">
+            <p>This visualisation is created by Adriel Koassih. The datasource is obtained from <a href="https://www.kaggle.com/">Kaggle</a></p>
+            <p>Sources: <i>Life Expectancy - What Does This Actually Mean?</i>, Retrieved from <a href="https://www.ourworldindata.org/">Our World in Data</a></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var specVis1= "js/combined.vl.json";
+    </script>
+
+</body>
+</html>
