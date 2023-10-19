@@ -3,8 +3,8 @@
   "padding": 5,
   "title": {"text": "Country against Happiness Score", "fontSize": 15},
   "description": "A simple bar chart with embedded data.",
-  "width": "container",
-  "height": 380,
+  "width": 800,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/GovindChadha/3179Assignment2/main/Dataset/result.csv"
   },
