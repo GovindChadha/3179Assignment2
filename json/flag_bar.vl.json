@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "padding": 5,
+  "title": {"text": "Country against Happiness Score", "fontSize": 15},
+  "description": "A simple bar chart with embedded data.",
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "https://raw.githubusercontent.com/GovindChadha/3179Assignment2/main/Dataset/result.csv"
+  },
+  "transform": [
+    {
+      "window": [{"op": "rank", "as": "rank"}],
+      "sort": [{"field": "Happiness Score", "order": "descending"}]
+    },
+    {"filter": "datum.rank <= 10"},
+    {
+      "calculate": "{'Finland': '🇫🇮', 'Denmark': '🇩🇰', 'Norway': '🇳🇴','Iceland': '🇮🇸', 'Netherlands': '🇳🇱', 'Switzerland': '🇦🇪', 'Sweden': '🇸🇪', 'New Zealand': '🇳🇿', 'Canada': '🇨🇦','Austria': '🇦🇹'}[datum.Country]",
+      "as": "Flag"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "tooltip": true, "binSpacing": 5},
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {"field": "Happiness Score", "order": "descending"}
+        },
+        "size": {"value": 13},
+        "color": {
+          "condition": {
+            "test": "datum['Country'] == 'Finland' ",
+            "value": "red"
+          },
+          "value": "purple"
+        },
+        "y": {
+          "field": "Happiness Score",
+          "type": "quantitative",
+          "scale": {"type": "linear", "domain": [0, 10]}
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "tooltip": true, "opacity": 1},
+      "encoding": {
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": {"field": "Happiness Score", "order": "descending"},
+          "axis": {"labelAlign": "left", "labelAngle": 40, "labelFontSize": 13}
+        },
+        "y": {
+          "field": "Happiness Score",
+          "type": "quantitative",
+          "scale": {"type": "linear", "domain": [0, 10]}
+        },
+        "text": {"field": "Flag", "type": "nominal"},
+        "size": {"value": 30}
+      }
+    }
+  ],
+  "background": "white",
+  "config": {}
+}
