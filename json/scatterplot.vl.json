@@ -5,7 +5,7 @@
     "fontSize": 17,
     "fontWeight": 600
   },
-  "description": "A scatterplot showing the correlation between Economy (GDP per capita) and Happiness Score of every country having a third dimension using region as different colours to represent each different regions.",
+  "description": "A scatterplot showing the correlation between Life Expectancy and Happiness Score of every country having a third dimension using region as different colours to represent each different regions.",
   "width": 800,
   "height": 400,
   "data": {
@@ -59,7 +59,7 @@
   ],
   "encoding": {
     "x": {
-      "field": "Economy (GDP per capita)",
+      "field": "Health (life expectancy)",
       "type": "quantitative",
       "scale": {"type": "linear", "domain": [0, 1.8]}
     },
