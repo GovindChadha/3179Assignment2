@@ -94,7 +94,7 @@
           "width": 750,
           "title": {"text": ["GDP per year"], "offset": 10},
           "data": {
-            "url": "https://raw.githubusercontent.com/GovindChadha/3179Assignment2/main/Dataset/gdp.csv"
+            "url": "https://raw.githubusercontent.com/GovindChadha/3179Assignment2/main/Dataset/happiness2.csv"
           },
           "transform": [{"filter": {"selection": "country"}}],
           "mark": {
