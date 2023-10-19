@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": {
-    "text": "Distribution of Happiness Score by Region",
+    "text": "Distribution of Freedom to make life choices by Region",
     "padding": 5,
     "fontSize": 17,
     "fontWeight": 600
   },
-  "description": "A vertical box plot showing median and lower and upper quartiles of the distribution of Happiness Score of regions.",
+  "description": "A vertical box plot showing median and lower and upper quartiles of the distribution of Freedom to make life choices of regions.",
   "width": 750,
   "height": 460,
   "data": {
@@ -21,14 +21,14 @@
     },
     "color": {"value": "purple"},
     "y": {
-      "field": "Happiness Score",
+      "field": "Freedom to make life choices",
       "type": "quantitative",
       "scale": {"zero": false}
     },
     "tooltip": [
       {"field": "Country", "type": "nominal"},
       {"field": "Region", "type": "nominal"},
-      {"field": "Happiness Score", "type": "quantitative"}
+      {"field": "Freedom to make life choices", "type": "quantitative"}
     ]
   },
   "background": "white",
